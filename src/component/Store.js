@@ -2,7 +2,7 @@ import {Row, Col} from 'react-bootstrap';
 // import { ProductArray} from './Product';
 import ProductCard from './ProductCard';
 import { useState } from 'react';
-
+import NavComp from './NavComp'
 function Store () {
     var view=true;
     const [myitems,setMyitems] =useState([])

@@ -6,12 +6,12 @@ import { Container } from 'react-bootstrap';
 import Cancel from './component/Cancel';
 import Success from './component/Success';
 import Store from './component/Store';
-  
+import { DataProvider } from './context/Data';  
 function App() {
   return (
     
     <Container>
-      
+      <DataProvider>
       <BrowserRouter>
         <Routes>
           <Route path='store' element={<Store />}></Route>
@@ -19,6 +19,7 @@ function App() {
           <Route path="cancel" element={<Cancel />}></Route>
         </Routes>
       </BrowserRouter>
+      </DataProvider>
     </Container>
     
   );
