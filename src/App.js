@@ -9,8 +9,9 @@ import Store from './component/Store';
   
 function App() {
   return (
+    
     <Container>
-      <NavComp />
+      
       <BrowserRouter>
         <Routes>
           <Route path='store' element={<Store />}></Route>
@@ -19,6 +20,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </Container>
+    
   );
 }
 
