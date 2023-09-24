@@ -1,5 +1,4 @@
-import { createContext, useState } from "react";
-import { view } from "../component/Product";
+import { createContext} from "react";
 
 const Data = createContext();
 export const DataProvider = ({ children }) => { // Destructure children
