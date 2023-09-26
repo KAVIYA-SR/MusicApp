@@ -1,9 +1,9 @@
 import {Row, Col} from 'react-bootstrap';
 import ProductCard from './ProductCard';
-import { useState } from 'react';
-import NavComp from './NavComp';
+import { useState,useContext } from 'react';
+import Data from '../context/Data';
 function Store () {
-    var view=true;
+    const {view} =useContext(Data);
     const [myitems,setMyitems] =useState([])
     const [items,setItems] =useState([
         {
@@ -79,14 +79,9 @@ function Store () {
             imageSrc:'https://i.scdn.co/image/ab67616d0000b2739a8c1958526a0463e509a863'
         },
     ])
-
-    const changeView =(view) =>{
-        view=!view;
-    }
     return(
         <>
-        <NavComp />
-        <div className='items'>
+        <div className='items'style={{display: view ?'block':'none'}}>
             <h1 align="center">Welcome to !</h1>
             <Row xs={1} md={4} className='g-4'>{
                 items.map((product) =>(
@@ -103,7 +98,7 @@ function Store () {
             }
             </Row>
         </div>
-        <div>
+        <div style={{display: !view ?'block':'none'}}>
             <h1>My Items</h1>
             <Row xs={1} md={4} className='g-4'>{
                 myitems.map((product,idx) =>(

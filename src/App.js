@@ -12,6 +12,7 @@ function App() {
     
     <Container>
       <DataProvider>
+        <NavComp/>
       <BrowserRouter>
         <Routes>
           <Route path='store' element={<Store />}></Route>

@@ -1,8 +1,15 @@
 // import { useState } from 'react';
+import { useContext } from 'react';
 import {Card , Button, CardImg} from 'react-bootstrap';
 import StripeCheckout from 'react-stripe-checkout';
+import Data from '../context/Data';
 function ProductCard({items,setItems,product,myitems,setMyitems}){
+    const {view} =useContext(Data);
+    const read = () =>{
+        console.log("read");
+    }
     const Change = (id) => {
+       
         const updatedItem = items.find(item => item.id === id);
     
         if (updatedItem) {
@@ -33,7 +40,8 @@ function ProductCard({items,setItems,product,myitems,setMyitems}){
                 <StripeCheckout 
                     token={(token)=>onToken(token,product.id)}
                     stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'
-                    ><Button>Add To MyList</Button></StripeCheckout>
+                    ><Button style={{display: view ?'block':'none'}} >Add To MyList</Button></StripeCheckout>
+                    <Button style={{display: !view?'block':'none'}} onClick={read}> View </Button>
             </Card.Body>
         </Card>
     )

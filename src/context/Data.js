@@ -1,15 +1,10 @@
-import { createContext} from "react";
+import { createContext,useState} from "react";
 
 const Data = createContext();
 export const DataProvider = ({ children }) => { // Destructure children
-        var view=true
-        function Changeview(){
-            
-            view=!view
-            console.log(view)
-        }
+      const [view,setView] = useState(true);
       return (
-        <Data.Provider value={{view,Changeview}}>
+        <Data.Provider value={{view,setView}}>
           {children} {/* Render the child components */}
         </Data.Provider>
       );
