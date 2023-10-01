@@ -3,10 +3,12 @@ import { useContext } from 'react';
 import {Card , Button, CardImg} from 'react-bootstrap';
 import StripeCheckout from 'react-stripe-checkout';
 import Data from '../context/Data';
+import Audio from './Audio';
 function ProductCard({items,setItems,product,myitems,setMyitems}){
     const {view} =useContext(Data);
-    const read = () =>{
+    const read = ({id}) =>{
         console.log("read");
+        <Audio id={id}/>
     }
     const Change = (id) => {
        
