@@ -31,16 +31,19 @@
     /* border: 2px solid #0D393B; */
     color:#0D393B;
     margin-left: 28px;
-    font-size: 25px;
+    font-size: 28px;
+
     list-style: none;
     border-radius: 7px;
 }
 .items li:hover{
-    background-image: linear-gradient(to right top, #0d393b, #0f4649, #105357, #116165, #116f74, #0e767a, #0a7d81, #068487, #028586, #008784, #008882, #018980);
-    color: white;
+    /* background-image: linear-gradient(to right top, #0d393b, #0f4649, #105357, #116165, #116f74, #0e767a, #0a7d81, #068487, #028586, #008784, #008882, #018980); */
+    /* color: white; */
     border: none;
+    border-bottom:2px solid #105357;
+    border-radius: none;
 }
-button{
+#but{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +54,11 @@ button{
     margin-top: 480px;
     margin-right: 100px;
     color: white;
-    font-size: 20px;
+    font-size: 23px;
     border: none;
     background-image: linear-gradient(to right top, #0d393b, #0f4649, #105357, #116165, #116f74, #0e767a, #0a7d81, #068487, #028586, #008784, #008882, #018980);
+}
+#mm{
+    color: white;
+    text-decoration: none;
 }

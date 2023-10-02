@@ -1,0 +1,77 @@
+h1{
+    color: #0D393B;
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-size:60px;
+    margin-left: 10px;  
+    /* margin-top: 20px; */
+}
+.Prices{
+    display: flex;
+    /* margin-top: 8%; */
+    margin-left: 17%;
+    margin-right: 100px;
+    
+}
+button{
+    border-radius: none;
+}
+#card{
+    
+}
+#card1{
+    margin-left: 80px;
+}
+#card2{
+    margin-left: 80px;
+}
+.mainn{
+    width: 100%;
+    height: 100vh;
+    background-color:#E1EFF0;
+}
+#plan{
+    color: #0D393B;
+    font-size: 30px;
+    font-weight: bold;    
+    margin-left: 10%;
+}
+#fea{
+    margin-left: 13%;
+    color: #0D393B;
+    font-weight: 500;    
+    font-style: italic;
+    margin-left: 10%;
+}
+#subsc{
+    margin-left: 10px;
+    color: #0D393B;
+    font-style: italic;
+    font-weight: 400;
+
+}
+#tag{
+    background-color: #E1EFF0;
+    color: #0D393B;
+    border: none;
+    width: 35%;
+    font-weight: 400;
+    font-style: oblique;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 17px;
+}
+ul{
+    list-style:none;
+    color: #0D393B;
+    font-weight: 400;
+    font-size: 20px;
+}
+#tag1{
+    background-color: orange;
+    color: black;
+    border: none;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-left: 15px;
+}

@@ -7,6 +7,7 @@ import Cancel from './component/Cancel';
 import Success from './component/Success';
 import Landing from './component/Landing';
 import Store from './component/Store';
+import Subscription from './component/Subscription';
 import { DataProvider } from './context/Data';  
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
        
       <BrowserRouter>
         <Routes>
-          <Route path='store' element={<Store />}></Route>
           <Route path='/' element={<Landing />}></Route>
+          <Route path='/subscription' element={<Subscription />}></Route>
+          <Route path='store' element={<Store />}></Route>
           <Route path="success" element={<Success />}></Route>
           <Route path="cancel" element={<Cancel />}></Route>
         </Routes>

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../style/landing.css';
+import { Link } from 'react-router-dom';
 const Landing = () => {
     return (
         <div className='Body'>
@@ -12,7 +13,7 @@ const Landing = () => {
                     <li>CONTACT</li>
                 </ul>
             </div>
-            <button>HEAL</button>
+            <button id='but'><Link to='/subscription' id='mm'>HEAL</Link></button>
         </div>
     );
 }

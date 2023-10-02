@@ -6,7 +6,7 @@ function NavComp(){
     const {view,setView} =useContext(Data);
     return(
         <Navbar expand="sm">
-        <Navbar.Brand href="/">Echo Wave</Navbar.Brand>
+        <Navbar.Brand href="/">Tune</Navbar.Brand>
             <Navbar.Collapse className='justify-content-end' >
                 <Button style={{display: view?'block':'none'}} onClick={() =>setView(!view)}>My List</Button>
                 <Button style={{display: !view?'block':'none'}} onClick={() => setView(!view)}>Play List</Button>
