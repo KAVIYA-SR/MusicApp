@@ -69,7 +69,7 @@ function Subscription() {
            
             </ul>
         </Card.Text>
-        <Button id='tag1'>Pay $24.55</Button>
+        <Button id='tag1'>Pay $48.55</Button>
       </Card.Body>
     </Card>
     </div>
