@@ -2,11 +2,11 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../style/subs.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCheck, faRightToBracket, faTicket } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faMusic} from '@fortawesome/free-solid-svg-icons';
 function Subscription() {
   return (
     <div className='mainn'>
-        <h1>Tune</h1>
+        <h1>Tune<FontAwesomeIcon icon={faMusic}  size="sm" /></h1>
     <p id='plan'>Plans & Pricing</p>
     <p id='fea'>Simple pricing and Advanced features for Your music experince</p>
     <div className='Prices'>
