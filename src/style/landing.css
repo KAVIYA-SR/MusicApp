@@ -1,0 +1,57 @@
+.Body{
+    width: 100%;
+
+    background: url(https://img.freepik.com/free-photo/tune-entertainment-streaming-media-icon_53876-121162.jpg?w=1800&t=st=1696227909~exp=1696228509~hmac=91f8a738a0f3d52ee84926165880119a80238e3af265ec7aff62aa4ecbec0f36);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.Body h1{
+    color: #0D393B;
+    font-family:sans-serif;
+    font-weight: bolder;
+    font-size:80px;
+    margin-left: 10px;
+}
+.items{
+    margin-top: -69px;
+    float: right;
+    margin-right: 95px;
+}
+.items ul{
+    display: flex;
+    
+}
+.items li{
+    width: 120px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid #0D393B; */
+    color:#0D393B;
+    margin-left: 28px;
+    font-size: 25px;
+    list-style: none;
+    border-radius: 7px;
+}
+.items li:hover{
+    background-image: linear-gradient(to right top, #0d393b, #0f4649, #105357, #116165, #116f74, #0e767a, #0a7d81, #068487, #028586, #008784, #008882, #018980);
+    color: white;
+    border: none;
+}
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100% 0% 70% 30% / 60% 0% 100% 40% ;  
+    width: 130px;
+    height: 70px;
+    float: right;
+    margin-top: 480px;
+    margin-right: 100px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    background-image: linear-gradient(to right top, #0d393b, #0f4649, #105357, #116165, #116f74, #0e767a, #0a7d81, #068487, #028586, #008784, #008882, #018980);
+}
