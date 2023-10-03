@@ -9,18 +9,15 @@ h1{
 .Prices{
     display: flex;
     /* margin-top: 8%; */
-    margin-left: 17%;
+    margin-left: 10%;
     margin-right: 100px;
     
 }
 button{
     border-radius: none;
 }
-#card{
-    
-}
 #card1{
-    margin-left: 80px;
+    margin-left:80px;
 }
 #card2{
     margin-left: 80px;
@@ -60,6 +57,7 @@ button{
     margin-top: 30px;
     margin-left: 30px;
     border-radius: 17px;
+    cursor:default;
 }
 ul{
     list-style:none;

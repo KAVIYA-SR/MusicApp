@@ -2,16 +2,31 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../style/subs.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCheck, faMusic} from '@fortawesome/free-solid-svg-icons';
+import { faCheck} from '@fortawesome/free-solid-svg-icons';
+import StripeCheckout from 'react-stripe-checkout';
+import Data from '../context/Data';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import NavComp from './NavComp';
+
 function Subscription() {
+  const {view,setView,view1,setView1} =useContext(Data);
+  const onToken =(token,data) =>{
+    console.log(data);
+    if(data==="setView1")
+      setView1(!view1);
+    else
+      setView(!view);
+  }
+  
   return (
     <div className='mainn'>
-        <h1>Tune<FontAwesomeIcon icon={faMusic}  size="sm" /></h1>
+       <NavComp />
     <p id='plan'>Plans & Pricing</p>
     <p id='fea'>Simple pricing and Advanced features for Your music experince</p>
     <div className='Prices'>
     <div id='card'>
-    <Card style={{ width: '23rem', height:'500px'}}>
+    <Card style={{ width: '19rem', height:'450px'}}>
     <Button id='tag'>24/7</Button>
       <Card.Body>
         <Card.Title><h1>Free</h1></Card.Title>
@@ -25,15 +40,15 @@ function Subscription() {
            
             </ul>
         </Card.Text>
-        <Button id='tag1'>Listen Music</Button>
+        <Button id='tag1'><Link to='/Free' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>
    <div id='card1'>
-    <Card style={{ width: '23rem', height:'620px'}}>
+    <Card style={{ width: '20rem', height:'520px'}}>
     <Button id='tag'>Monthly</Button>
       <Card.Body>
-        <Card.Title><h1>$24.55</h1></Card.Title>
+        <Card.Title><h1 style={{textDecoration : !view1 ? ' line-through':'none'}}>$24.55</h1></Card.Title>
         <Card.Text id='subsc'>
          "Monthly subscription: Premium music, exclusive access."
         </Card.Text>
@@ -46,15 +61,20 @@ function Subscription() {
            
             </ul>
         </Card.Text>
-        <Button id='tag1'>Pay $24.55</Button>
+        <StripeCheckout
+          token={(token)=>onToken(token,"setView1")}
+         stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'>
+        <Button style={{display: view1 ?'block':'none'}} id='tag1'>Pay $24.55</Button></StripeCheckout>
+        <Button style={{display: !view1 ?'block':'none'}} id='tag1'><Link to='/Free' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>
     <div id='card2'>
-    <Card style={{ width: '23rem', height:'720px'}}>
+    <Card style={{ width: '20rem', height:'600px'}}>
     <Button id='tag'>Yearly</Button>
       <Card.Body>
-        <Card.Title><h1>$48.55</h1></Card.Title>
+        <Card.Title><h1 style={{textDecoration : !view ? ' line-through':'none'}}>$48.55</h1></Card.Title>
+        
         <Card.Text id='subsc'>
          "Yearly subscription: Uninterrupted music, incredible value."
         </Card.Text>
@@ -66,10 +86,14 @@ function Subscription() {
             <li> <FontAwesomeIcon icon={faCheck}  size="md" />  Offline Music</li>
             <li> <FontAwesomeIcon icon={faCheck}  size="md" />  365+ 24 days free access </li>
             <li> <FontAwesomeIcon icon={faCheck}  size="md" />  10+ playlists..</li>
-           
+          
             </ul>
         </Card.Text>
-        <Button id='tag1'>Pay $48.55</Button>
+        <StripeCheckout
+          token={(token)=>onToken(token,"setView")}
+         stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'>
+        <Button style={{display: view ?'block':'none'}} id='tag1'>Pay $48.55</Button></StripeCheckout>
+        <Button style={{display: !view?'block':'none'}} id='tag1'><Link to='/Free' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>

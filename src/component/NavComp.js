@@ -1,17 +1,22 @@
 
-import { useContext } from 'react';
-import {Navbar , Button } from 'react-bootstrap';
-import Data from '../context/Data';
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faMusic} from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 function NavComp(){
-    const {view,setView} =useContext(Data);
+  
     return(
-        <Navbar expand="sm">
-        <Navbar.Brand href="/">Tune</Navbar.Brand>
-            <Navbar.Collapse className='justify-content-end' >
-                <Button style={{display: view?'block':'none'}} onClick={() =>setView(!view)}>My List</Button>
-                <Button style={{display: !view?'block':'none'}} onClick={() => setView(!view)}>Play List</Button>
-            </Navbar.Collapse>
-        </Navbar>
+        <>
+        <h1>Tune<FontAwesomeIcon icon={faMusic}  size="md" /></h1>
+        <div className='items'>
+            <ul>
+                <li><Link to='/' style={{textDecoration:'none',color:'black'}}>HOME</Link></li>
+                <li>SERVICES</li>
+                <li>CONTACT</li>
+            </ul>
+        </div>
+        </>
     )
 }
 
