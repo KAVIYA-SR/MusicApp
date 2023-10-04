@@ -81,20 +81,20 @@ function Store () {
     ])
     return(
         <>
-        <div className='items'style={{display: view ?'block':'none'}}>
+        <div className='items'>
             <h1 align="center">Welcome to !</h1>
             <Row xs={1} md={4} className='g-4'>{
-                items.map((product) =>(
-                    <Col align="center" key={product.id}>
-                        <ProductCard 
-                        product={product} 
-                        items={items}
-                        setItems={setItems}
-                        myitems={myitems}
-                        setMyitems ={setMyitems}
-                        />
-                    </Col>
-                ))
+                // items.map((product) =>(
+                //     <Col align="center" key={product.id}>
+                //         <ProductCard 
+                //         product={product} 
+                //         items={items}
+                //         setItems={setItems}
+                //         myitems={myitems}
+                //         setMyitems ={setMyitems}
+                //         />
+                //     </Col>
+                // ))
             }
             </Row>
         </div>

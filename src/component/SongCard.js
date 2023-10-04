@@ -10,7 +10,7 @@ const SongCard = ({ song }) => {
     <div className="song-card">   
       <audio
         controls  
-        src={song.src1}
+        src={song.songsrc}
         onPlay={togglePlay}
         onPause={togglePlay}
       />

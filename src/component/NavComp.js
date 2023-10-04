@@ -12,8 +12,8 @@ function NavComp(){
         <div className='items'>
             <ul>
                 <li><Link to='/' style={{textDecoration:'none',color:'black'}}>HOME</Link></li>
-                <li>SERVICES</li>
-                <li>CONTACT</li>
+                <li><Link to='/subscription' style={{textDecoration:'none',color:'black'}}>SERVICES</Link></li>
+                {/* <li><Link to='/contact' style={{textDecoration:'none',color:'black'}}>CONTACT</Link></li> */}
             </ul>
         </div>
         </>
