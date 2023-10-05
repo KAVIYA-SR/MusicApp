@@ -65,7 +65,7 @@ function Subscription() {
           token={(token)=>onToken(token,"setView1")}
          stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'>
         <Button style={{display: view1 ?'block':'none'}} id='tag1'>Pay $24.55</Button></StripeCheckout>
-        <Button style={{display: !view1 ?'block':'none'}} id='tag1'><Link to='/Free' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
+        <Button style={{display: !view1 ?'block':'none'}} id='tag1'><Link to='' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>
@@ -93,7 +93,7 @@ function Subscription() {
           token={(token)=>onToken(token,"setView")}
          stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'>
         <Button style={{display: view ?'block':'none'}} id='tag1'>Pay $48.55</Button></StripeCheckout>
-        <Button style={{display: !view?'block':'none'}} id='tag1'><Link to='/Free' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
+        <Button style={{display: !view?'block':'none'}} id='tag1'><Link to='' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>

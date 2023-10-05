@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ProductCard from './ProductCard'
 import {Row, Col} from 'react-bootstrap';
 import '../style/free.css'
 import NavComp from './NavComp';
 
 const Free = () => {
-    const [items,setItems] =useState([
+    const items =[
         {
             id: "1",
             title: "Titanic",
@@ -32,7 +32,7 @@ const Free = () => {
             numReviews: 290,
             imageSrc:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAgYwgIPkLv7Zxu6ygYW-A1cMEA7Z9UlzfZgTfldahyNFhYdevsbahd1nFCCI5S1otUBA&usqp=CAU'
         },
-    ])
+    ]
     const songs =[
         {
             id:'1',
@@ -72,8 +72,6 @@ const Free = () => {
                     <Col align="center" key={product.id}>
                         <ProductCard 
                         product={product} 
-                        items={items}
-                        setItems={setItems}
                         songs={songs}
                         />
                     </Col>
