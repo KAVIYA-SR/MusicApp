@@ -9,6 +9,7 @@ import Free from './component/Free';
 import { DataProvider } from './context/Data';  
 function App() {
   return (
+    <div className='appp'>
       <DataProvider>
       <BrowserRouter>
         <Routes>
@@ -21,7 +22,7 @@ function App() {
       </BrowserRouter>
       </DataProvider>
   
-    
+      </div>
   );
 }
 

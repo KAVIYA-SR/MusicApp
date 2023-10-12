@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../style/subs.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCheck} from '@fortawesome/free-solid-svg-icons';
+import { faMusic,faCheck, faLock, faLockOpen} from '@fortawesome/free-solid-svg-icons';
 import StripeCheckout from 'react-stripe-checkout';
 import Data from '../context/Data';
 import { useContext } from 'react';
@@ -21,7 +21,7 @@ function Subscription() {
   
   return (
     <div className='mainn'>
-       <NavComp />
+       <h2>Tune<FontAwesomeIcon icon={faMusic}  size="sm" /></h2>
     <p id='plan'>Plans & Pricing</p>
     <p id='fea'>Simple pricing and Advanced features for Your music experince</p>
     <div className='Prices'>
@@ -29,7 +29,7 @@ function Subscription() {
     <Card style={{ width: '19rem', height:'450px'}}>
     <Button id='tag'>24/7</Button>
       <Card.Body>
-        <Card.Title><h1>Free</h1></Card.Title>
+        <Card.Text><h2>Free</h2></Card.Text>
         <Card.Text id='subsc'>
          "Free music subscription: Unlimited access, endless tunes."
         </Card.Text>
@@ -48,7 +48,7 @@ function Subscription() {
     <Card style={{ width: '20rem', height:'520px'}}>
     <Button id='tag'>Monthly</Button>
       <Card.Body>
-        <Card.Title><h1 style={{filter : !view1 ? 'blur(3px)':'none'}}>$24.55</h1></Card.Title>
+        <Card.Title><h1 style={{textDecoration : !view1 ? ' line-through':'none'}}>$24.55</h1></Card.Title>
         <Card.Text id='subsc'>
          "Monthly subscription: Premium music, exclusive access."
         </Card.Text>
@@ -65,7 +65,7 @@ function Subscription() {
           token={(token)=>onToken(token,"setView1")}
          stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'>
         <Button style={{display: view1 ?'block':'none'}} id='tag1'>Pay $24.55</Button></StripeCheckout>
-        <Button style={{display: !view1 ?'block':'none'}} id='tag1'><Link to='/monthly' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
+        <Button style={{display: !view1 ?'block':'none'}} id='tag1'><Link to='' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>
@@ -73,7 +73,7 @@ function Subscription() {
     <Card style={{ width: '20rem', height:'600px'}}>
     <Button id='tag'>Yearly</Button>
       <Card.Body>
-        <Card.Title><h1 style={{filter : !view ? 'blur(3px)':'none'}}>$48.55</h1></Card.Title>
+        <Card.Title><h1 style={{textDecoration : !view ? ' line-through':'none',filter : !view ? 'blur(3px)':'none'}}>$48.55</h1></Card.Title>
         
         <Card.Text id='subsc'>
          "Yearly subscription: Uninterrupted music, incredible value."
@@ -93,7 +93,7 @@ function Subscription() {
           token={(token)=>onToken(token,"setView")}
          stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'>
         <Button style={{display: view ?'block':'none'}} id='tag1'>Pay $48.55</Button></StripeCheckout>
-        <Button style={{display: !view?'block':'none'}} id='tag1'><Link to='/yearly' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
+        <Button style={{display: !view?'block':'none'}} id='tag1'><Link to='' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>
