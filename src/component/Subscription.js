@@ -48,7 +48,7 @@ function Subscription() {
     <Card style={{ width: '20rem', height:'520px'}}>
     <Button id='tag'>Monthly</Button>
       <Card.Body>
-        <Card.Title><h1 style={{textDecoration : !view1 ? ' line-through':'none',filter : !view1 ? 'blur(3px)':'none'}}>$24.55</h1></Card.Title>
+        <Card.Title><h1 style={{filter : !view1 ? 'blur(3px)':'none'}}>$24.55</h1></Card.Title>
         <Card.Text id='subsc'>
          "Monthly subscription: Premium music, exclusive access."
         </Card.Text>
@@ -73,7 +73,7 @@ function Subscription() {
     <Card style={{ width: '20rem', height:'600px'}}>
     <Button id='tag'>Yearly</Button>
       <Card.Body>
-        <Card.Title><h1 style={{textDecoration : !view ? ' line-through':'none',filter : !view ? 'blur(3px)':'none'}}>$48.55</h1></Card.Title>
+        <Card.Title><h1 style={{filter : !view ? 'blur(3px)':'none'}}>$48.55</h1></Card.Title>
         
         <Card.Text id='subsc'>
          "Yearly subscription: Uninterrupted music, incredible value."

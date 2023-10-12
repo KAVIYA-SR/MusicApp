@@ -13,7 +13,7 @@ const SongCard = ({ product }) => {
         <img style={image} src={product.imageSrc} className='card-img-top' alt={product.title}></img>
         <div className='card-body'>
             <h2 className='card-title'>{product.title}</h2>
-            <audio controls src={product.songsrc} />
+            <audio style={{width:'100%'}} controls src={product.songsrc} />
         </div>
     </div>
   );

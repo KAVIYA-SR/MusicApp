@@ -12,7 +12,7 @@ const Monthly = () => {
     const items =[
         {
             id: "1",
-            title: "",
+            title: "Titanic",
             no: '5',
             imageSrc: 'https://flxt.tmsimg.com/assets/p20056_v_v8_ab.jpg',
             ratings: 4.8,
