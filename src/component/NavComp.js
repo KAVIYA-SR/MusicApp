@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 import { useContext } from 'react';
 import Data, { DataProvider } from '../context/Data'
-
 function NavComp(){
     const {text,setText}=useContext(Data);
     return(
