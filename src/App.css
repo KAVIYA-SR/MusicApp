@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -35,4 +36,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+.appp{
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Tilt Neon', sans-serif;
+  color: #0D393B;
 }
