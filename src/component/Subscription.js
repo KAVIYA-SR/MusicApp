@@ -48,7 +48,7 @@ function Subscription() {
     <Card style={{ width: '20rem', height:'520px'}}>
     <Button id='tag'>Monthly</Button>
       <Card.Body>
-        <Card.Title><h1 style={{textDecoration : !view1 ? ' line-through':'none'}}>$24.55</h1></Card.Title>
+        <Card.Title><h2 style={{textDecoration : !view1 ? ' line-through':'none'}}>$24.55</h2></Card.Title>
         <Card.Text id='subsc'>
          "Monthly subscription: Premium music, exclusive access."
         </Card.Text>
@@ -64,8 +64,8 @@ function Subscription() {
         <StripeCheckout
           token={(token)=>onToken(token,"setView1")}
          stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'>
-        <Button style={{display: view1 ?'block':'none'}} id='tag1'>Pay $24.55</Button></StripeCheckout>
-        <Button style={{display: !view1 ?'block':'none'}} id='tag1'><Link to='' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
+        <Button style={{display: view1 ?'block':'none'}} id='tag1'><FontAwesomeIcon icon={faLock}  size="md" /> Pay $24.55</Button></StripeCheckout>
+        <Button style={{display: !view1 ?'block':'none'}} id='tag1'><Link to='' style={{textDecoration:'none',color:'black'}} ><FontAwesomeIcon icon={faLockOpen}  size="md" /> Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>
@@ -73,7 +73,7 @@ function Subscription() {
     <Card style={{ width: '20rem', height:'600px'}}>
     <Button id='tag'>Yearly</Button>
       <Card.Body>
-        <Card.Title><h1 style={{textDecoration : !view ? ' line-through':'none',filter : !view ? 'blur(3px)':'none'}}>$48.55</h1></Card.Title>
+        <Card.Title><h2 style={{textDecoration : !view ? ' line-through':'none',filter : !view ? 'blur(3px)':'none'}}>$48.55</h2></Card.Title>
         
         <Card.Text id='subsc'>
          "Yearly subscription: Uninterrupted music, incredible value."
@@ -92,8 +92,8 @@ function Subscription() {
         <StripeCheckout
           token={(token)=>onToken(token,"setView")}
          stripeKey='pk_test_51NriDdSENiy9WjOrj37NlXxg1R1iM5QyuYDKqQ2hbxaKBTRNlHcul6X68nBVjpYPRqEXCloRxTEBB6onI9yaNoSc00scU5LYig'>
-        <Button style={{display: view ?'block':'none'}} id='tag1'>Pay $48.55</Button></StripeCheckout>
-        <Button style={{display: !view?'block':'none'}} id='tag1'><Link to='' style={{textDecoration:'none',color:'black'}} >Listen Music</Link></Button>
+        <Button style={{display: view ?'block':'none'}} id='tag1'><FontAwesomeIcon icon={faLock}  size="md" /> Pay $48.55</Button></StripeCheckout>
+        <Button style={{display: !view?'block':'none'}} id='tag1'><Link to='' style={{textDecoration:'none',color:'black'}} ><FontAwesomeIcon icon={faLockOpen}  size="md" /> Listen Music</Link></Button>
       </Card.Body>
     </Card>
     </div>
