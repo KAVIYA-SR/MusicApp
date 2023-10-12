@@ -1,28 +1,26 @@
-import { useState } from 'react';
-import {Card ,Button, CardImg ,Row ,Col} from 'react-bootstrap';
-import SongCard from './SongCard';
+
+import {Card ,Button, CardImg } from 'react-bootstrap';
+import {  useContext } from 'react';
+import Data from '../context/Data';
 
 function ProductCard({product,songs}){
-   
-    const [audio,setAudio]=useState(null);
-    const go =(id) =>{
-       
-        const song =songs.filter(item => item.id===id);
-        const val=song[0].track;
-        console.log(val);
-        if(song){
-            setAudio(val);
-            console.log(audio);
-            {audio && (
-                <Row xs={1} md={2}>
-                    <Col align="center">
-                    <SongCard audio={audio} />
-                    </Col>
-                </Row>
-            )}
+    // const list =songs;
+    const {text,setText,setList} =useContext(Data);
+    const go = (id) => {
+        
+        if(songs){
+        const song = songs.find((item) => item.id === id); 
+        console.log(song.track);
+        if (song && song.track) {
+           console.log(song.track)
+           setList(song.track);
         }
-
+        setText(!text);
+        }
+        else
+            console.log("no")
     };
+    
     
     const image ={
         minHeight:'270px',
@@ -42,7 +40,6 @@ function ProductCard({product,songs}){
                     Number of Reviews: {product.numReviews}
                 </Card.Text>
                 <Button id='tag1' onClick={() => go(product.id)}>View</Button>
-               
             </Card.Body>
         </Card>
     )

@@ -1,19 +1,20 @@
 import React from 'react';
-import { useState } from 'react';
-const SongCard = ({ song }) => {
-    const [isPlaying, setIsPlaying] = useState(false);
 
-    const togglePlay = () => {
-      setIsPlaying(!isPlaying);
-    };
+
+const SongCard = ({ product }) => {
+  console.log(product.songsrc);
+  const image ={
+    minHeight:'270px',
+    maxHeight:'270px',
+    maxWidth:'100%'
+}
   return (
-    <div className="song-card">   
-      <audio
-        controls  
-        // src={song.songsrc}
-        onPlay={togglePlay}
-        onPause={togglePlay}
-      />
+    <div className='card' >
+        <img style={image} src={product.imageSrc} className='card-img-top' alt={product.title}></img>
+        <div className='card-body'>
+            <h2 className='card-title'>{product.title}</h2>
+            <audio controls src={product.songsrc} />
+        </div>
     </div>
   );
 };
