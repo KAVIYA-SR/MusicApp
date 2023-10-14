@@ -2,23 +2,26 @@
 import {Card ,Button, CardImg } from 'react-bootstrap';
 import {  useContext } from 'react';
 import Data from '../context/Data';
+import { Link } from 'react-router-dom';
 
 function ProductCard({product,songs}){
     // const list =songs;
-    const {text,setText,setList} =useContext(Data);
+    const {text,setText,setList,list} =useContext(Data);
     const go = (id) => {
-        
+        console.log(list)
         if(songs){
         const song = songs.find((item) => item.id === id); 
-        console.log(song.track);
+        // console.log(song.track);
         if (song && song.track) {
-           console.log(song.track)
+        //    console.log(song.track)
            setList(song.track);
         }
         setText(!text);
         }
         else
             console.log("no")
+        console.log(id)
+        console.log(list)
     };
     
     
@@ -39,7 +42,7 @@ function ProductCard({product,songs}){
                     <br />
                     Number of Reviews: {product.numReviews}
                 </Card.Text>
-                <Button id='tag1' onClick={() => go(product.id)}>View</Button>
+                <Button id='tag1' onClick={() => go(product.id)}><Link to='/freeplaylist'>View</Link> </Button>
             </Card.Body>
         </Card>
     )
