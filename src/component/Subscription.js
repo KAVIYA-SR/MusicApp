@@ -7,7 +7,6 @@ import StripeCheckout from 'react-stripe-checkout';
 import Data from '../context/Data';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import NavComp from './NavComp';
 
 function Subscription() {
   const {view,setView,view1,setView1} =useContext(Data);

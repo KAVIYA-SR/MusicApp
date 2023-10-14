@@ -7,7 +7,8 @@ import Monthly from './component/Monthly';
 import Subscription from './component/Subscription';
 import Free from './component/Free';
 import { DataProvider } from './context/Data';  
-import FreePlaylist from './component/FreePlaylist';
+// import FreePlaylist from './component/FreePlaylist';
+import Player from './component/Player';
 function App() {
   return (
     <div className='appp'>
@@ -19,7 +20,7 @@ function App() {
           <Route path='/free' element={<Free />}></Route>
           <Route path='/monthly' element={<Monthly />}></Route>
           <Route path="/yearly" element={<Yearly/>}></Route>
-          <Route path="/freeplaylist" element={<FreePlaylist/>}></Route>
+          <Route path="/freeplaylist" element={<Player/>}></Route>
         </Routes>
       </BrowserRouter>
       </DataProvider>

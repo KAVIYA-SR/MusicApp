@@ -4,24 +4,15 @@ import {  useContext } from 'react';
 import Data from '../context/Data';
 import { Link } from 'react-router-dom';
 
-function ProductCard({product,songs}){
+function ProductCard({product}){
     // const list =songs;
-    const {text,setText,setList,list} =useContext(Data);
+    const {songs,setPlay} =useContext(Data);
     const go = (id) => {
-        console.log(list)
-        if(songs){
+       
+        
         const song = songs.find((item) => item.id === id); 
-        // console.log(song.track);
-        if (song && song.track) {
-        //    console.log(song.track)
-           setList(song.track);
-        }
-        setText(!text);
-        }
-        else
-            console.log("no")
-        console.log(id)
-        console.log(list)
+        setPlay(song.playList)
+        console.log(song)
     };
     
     

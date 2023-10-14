@@ -1,13 +1,8 @@
-
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faMusic} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-
-import { useContext } from 'react';
-import Data, { DataProvider } from '../context/Data'
 function NavComp(){
-    const {text,setText}=useContext(Data);
+    
     return(
         <div className='main'>
         <h2>Tune<FontAwesomeIcon icon={faMusic}  size="md" /></h2>

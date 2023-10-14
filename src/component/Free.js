@@ -6,7 +6,7 @@ import NavComp from './NavComp';
 import Data from '../context/Data';
 
 const Free = () => {
-    const {text,items,songs} =useContext(Data);
+    const {items} =useContext(Data);
     
   return (
     <>
@@ -18,7 +18,6 @@ const Free = () => {
                     <Col align="center" key={product.id}>
                         <ProductCard 
                             product={product} 
-                            songs={songs}
                         />
                     </Col>
                 ))
