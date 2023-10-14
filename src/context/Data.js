@@ -11,7 +11,7 @@ export const DataProvider = ({ children }) => { // Destructure children
         {
             id: "1",
             title: "Titanic",
-            no: '5',
+            no: '57',
             imageSrc: 'https://flxt.tmsimg.com/assets/p20056_v_v8_ab.jpg',
             ratings: 4.8,
             numReviews: 200,

@@ -8,8 +8,8 @@ function NavComp(){
         <h2>Tune<FontAwesomeIcon icon={faMusic}  size="md" /></h2>
         <div className='items'>
             <ul>
-                <li><Link to='/' style={{textDecoration:'none',color:'black'}}>HOME</Link></li>
-                <li><Link to='/subscription' style={{textDecoration:'none',color:'black'}}>SERVICES</Link></li>
+                <li><Link to='/' style={{textDecoration:'none',color:'#0D393B'}}>HOME</Link></li>
+                <li><Link to='/subscription' style={{textDecoration:'none',color:'#0D393B'}}>SERVICES</Link></li>
                 {/* <li><Link to='/contact' style={{textDecoration:'none',color:'black'}}>CONTACT</Link></li> */}
             </ul>
         </div>
