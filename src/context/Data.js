@@ -7,6 +7,7 @@ export const DataProvider = ({ children }) => { // Destructure children
       const [text,setText] = useState(true);
       const [list,setList]=useState([]);
       const [play,setPlay]=useState('');
+      const [playbg,setPlaybg]=useState('');
       const items =[
         {
             id: "1",
@@ -21,7 +22,7 @@ export const DataProvider = ({ children }) => { // Destructure children
             title:"Avatar",
             price:"42",
             no:'5',
-            imageSrc:'https://p4.wallpaperbetter.com/wallpaper/810/33/235/movies-avatar-1680x1050-entertainment-movies-hd-art-wallpaper-preview.jpg',
+            imageSrc:'https://w0.peakpx.com/wallpaper/771/901/HD-wallpaper-avatar-the-way-of-water-2.jpg',
             ratings: 4.8,
             numReviews: 250,
         },
@@ -38,19 +39,23 @@ export const DataProvider = ({ children }) => { // Destructure children
     const songs=
     [
         {id:'1',
-         playList:'https://open.spotify.com/album/3XwgFTxiWxep4s1VjPEaHs'    
+         playList:'https://open.spotify.com/album/3XwgFTxiWxep4s1VjPEaHs'
+         ,
+         background:'linear-gradient(to right top, #bb4545, #bb5050, #ba5a5a, #b96464, #b76e6e, #b87878, #b88181, #b88b8b, #bc9797, #bfa4a4, #c2b0b0, #c4bdbd)'  
         },
         {id:'2',
-        playList:'https://open.spotify.com/album/1H81jGoWeLI8ufq42GfDPn'    
+        playList:'https://open.spotify.com/playlist/1bFIa4jcI9XyCNmHLv6pQZ',
+        background:'linear-gradient(to right top, #727272, #7d7d7d, #878787, #929292, #9d9d9d, #a9a9a9, #b4b4b4, #c0c0c0, #cfcfcf, #dfdfdf, #efefef, #ffffff)'
         },
         {id:'3',
-        playList:'https://open.spotify.com/playlist/4JWL6fpnL8sjFNYUwF50l7'    
+        playList:'https://open.spotify.com/playlist/4JWL6fpnL8sjFNYUwF50l7'    ,
+        background:'linear-gradient(to right top, #114567, #184a6b, #1e4e6e, #245372, #2a5875, #36627f, #426c88, #4d7792, #628aa4, #779eb7, #8cb2ca, #a2c6de)'
         }
 
     ]
 
       return (
-        <Data.Provider value={{view,setView,view1,setView1,text,setText,list,setList,items,songs,play,setPlay}}>
+        <Data.Provider value={{view,setView,view1,setView1,text,setText,list,setList,items,songs,play,setPlay,setPlaybg,playbg}}>
           {children} {/* Render the child components */}
         </Data.Provider>
       );

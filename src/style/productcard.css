@@ -32,7 +32,7 @@
     /* margin-left: 24%; */
     color:#E5F9F4;
     font-size: 20px;
-    background-color: #E5F9F4;
+    /* background-color: #E5F9F4; */
     border-radius: 15px;
     border: 2px solid #426259;
 }
@@ -56,12 +56,20 @@
     
 }
 #cardbg{
-    background: #F7FFFF;
+    
+    /* background: #F7FFFF;0 */
 /* background: radial-gradient(circle, rgba(159,227,217,1) 0%, rgba(229,249,244,1) 35%, rgba(229,249,244,1) 100%); */
-
+    
 }
 .image{
     /* display: none; */
     width: 150%;
     
+}
+#tag1{
+    color: white;
+}
+.nn{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
 }

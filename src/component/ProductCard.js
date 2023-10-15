@@ -6,21 +6,15 @@ import { Link } from 'react-router-dom';
 import '../style/productcard.css'
 function ProductCard({product}){
     // const list =songs;
-    const {songs,setPlay} =useContext(Data);
+    const {songs,setPlay,setPlaybg} =useContext(Data);
     const go = (id) => {
        
         
         const song = songs.find((item) => item.id === id); 
         setPlay(song.playList)
+        setPlaybg(song.background)
         console.log(song)
     };
-    
-    
-    const image ={
-        minHeight:'270px',
-        maxHeight:'270px',
-        maxWidth:'100%'
-    }
     
     return(
         <div className='card'>
@@ -28,7 +22,7 @@ function ProductCard({product}){
         
         <div className='nn' style={{display:'flex',justifyContent:'space-between'}}>
         <Card style={{ width: '20rem'}}>
-        <Card.Img variant="top" src={product.imageSrc} />
+        <Card.Img variant="top" src={product.imageSrc} style={{width:'100%',height:'350px'}} />
      
         <Card.Body id='cardbg'>
             <div style={{display:'flex',flexDirection:'row'}}> <Card.Title><h3>{product.title}</h3></Card.Title>
@@ -45,7 +39,7 @@ function ProductCard({product}){
                 <FontAwesomeIcon icon={faCartShopping} style={{fontWeight:'20px',cursor: 'pointer',marginLeft:'7px'}}/> ADD TO CART</Button> */}
 
             
-<Button id='tag1' onClick={() => go(product.id)}><Link to='/freeplaylist'>View</Link> </Button>
+        <Button id='tag1'  onClick={() => go(product.id)}><Link to='/freeplaylist' style={{color:'black',textDecoration:'none'}}>Play</Link> </Button>
         </Card.Body>
         </Card>
         </div>
