@@ -6,7 +6,7 @@ import NavComp from './NavComp';
 import Data from '../context/Data';
 
 const Free = () => {
-    const {items} =useContext(Data);
+    const {items,songs} =useContext(Data);
     
   return (
     <div style={{width:'100%',height:'100vh',backgroundImage: 'linear-gradient(to right top, #ffffff, #eff5ff, #d6edfd, #b8e7f4, #9de1e0)'}}>
@@ -19,6 +19,7 @@ const Free = () => {
                     <Col align="center" key={product.id}>
                         <ProductCard 
                             product={product} 
+                            songs={songs}
                         />
                     </Col>
                 ))

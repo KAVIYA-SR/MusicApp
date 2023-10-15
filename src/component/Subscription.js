@@ -47,7 +47,6 @@ function Subscription() {
     <Card style={{ width: '20rem', height:'520px'}}>
     <Button id='tag'>Monthly</Button>
       <Card.Body>
-        {/* <Card.Title><h2 style={{textDecoration : !view1 ? ' line-through':'none'}}>$24.55</h2></Card.Title> */}
         <Card.Title><h2 style={{textDecoration : !view1 ? ' line-through':'none',filter : !view1 ? 'blur(3px)':'none'}}>$24.55</h2></Card.Title>
         <Card.Text id='subsc'>
          "Monthly subscription: Premium music, exclusive access."
