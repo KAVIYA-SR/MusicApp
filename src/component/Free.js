@@ -14,7 +14,7 @@ const Free = () => {
         <h1 align="center">Enjoy By Hearing Free Music!</h1>
         <div className='product' style={{margin:'20px'}}>
             
-            <Row xs={1} md={4} className='g-4' >{
+            <Row xs={1} md={5} className='g-4' >{
                 items.map((product) =>(
                     <Col align="center" key={product.id}>
                         <ProductCard 

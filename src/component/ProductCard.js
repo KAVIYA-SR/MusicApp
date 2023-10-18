@@ -21,7 +21,7 @@ function ProductCard({product,songs}){
 
         
         <div className='nn' style={{display:'flex',justifyContent:'space-between'}}>
-        <Card style={{ width: '20rem'}}>
+        <Card style={{ width: '23rem'}}>
         <Card.Img variant="top" src={product.imageSrc} style={{width:'100%',height:'300px'}} />
      
         <Card.Body id='cardbg'>
